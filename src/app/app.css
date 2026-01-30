@@ -1,0 +1,128 @@
+/* 🌐 Global */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* 🌙 Dark mode support */
+.dark {
+  background: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* 📦 Main container */
+.todo-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .todo-container {
+  background: #1e1e1e;
+  box-shadow: 0 10px 25px rgba(255,255,255,0.05);
+}
+
+/* 🧾 Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ✏️ Input section */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+}
+
+.dark input {
+  background: #2a2a2a;
+  border-color: #444;
+  color: white;
+}
+
+/* ➕ Add button */
+.add-btn {
+  padding: 10px 14px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #4338ca;
+}
+
+/* 🌗 Dark mode toggle */
+.toggle-btn {
+  margin: 15px auto;
+  display: block;
+  background: transparent;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dark .toggle-btn {
+  color: #bbb;
+}
+
+/* 🧩 Todo list */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+}
+
+.dark .todo-item {
+  background: #2a2a2a;
+}
+
+/* 📝 Text */
+.todo-text {
+  font-size: 15px;
+}
+
+/* 🗑 Delete button */
+.delete-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
