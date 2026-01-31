@@ -19,16 +19,19 @@ export class Login {
 
   constructor(private authService: AuthService) {}
 
-  login() {
-    this.authService.login(this.email, this.password)
-      .subscribe({
-       // login.ts me login() ke andar
-next: (res:any) => {
-  console.log('Login success', res);
-  // navigate after login
-  window.location.href = '/todo'; // ya router.navigate(['/todo']) agar Router inject kiya hai
+ login() {
+  if (!this.email || !this.password) {
+    alert('Email and password are required');
+    return;
+  }
+
+  this.authService.login(this.email, this.password)
+    .subscribe({
+      next: () => window.location.href = '/todo',
+      error: (err) =>
+        alert(err.error?.message || 'Invalid email or password')
+    });
 }
 
-      });
   }
-}
+
