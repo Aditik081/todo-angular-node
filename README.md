@@ -39,7 +39,7 @@ cd todo-angular-node
 
 ## How to Run
 
-### Backend
+### 2️⃣ Backend
 ```bash
 cd backend
 npm install
