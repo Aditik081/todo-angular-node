@@ -27,68 +27,62 @@ It supports **user authentication** and **CRUD operations** on To-Do items.
 - Mongoose
 - JWT
 
+
+> ### 📥 Clone Repository
+> ```bash
+> git clone https://github.com/Aditik081/todo-angular-node.git
+> cd todo-angular-node
+> ```
+
 ---
 
-## ⚙️ Setup Steps
+> ### 🖥️ Backend Setup
+> ```bash
+> cd backend
+> npm install
+> npm start
+> ```
+> **Backend runs on:** [http://localhost:3000](http://localhost:3000)
 
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/Aditik081/todo-angular-node.git
-cd todo-angular-node
+---
 
+> ### 🌐 Frontend Setup
+> ```bash
+> cd to-do-list
+> npm install
+> ng serve
+> ```
+> **Frontend runs on:** [http://localhost:4200](http://localhost:4200)
+>
+> 
 
-## How to Run
-
-### 2️⃣ Backend
-```bash
-cd backend
-npm install
-npm start
-
-#Backend will run on:
-http://localhost:3000
-
-### Frontend Setup
-cd to-do-list
-npm install
-ng serve
-
-#Frontend will run on:
-http://localhost:4200
-
-##Approach
-
-Built REST APIs for authentication and To-Do CRUD operations
-
-Used JWT for secure user authentication
-
-Angular services handle backend communication
-
-Modular folder structure for clean and scalable code
-
-Separate components for Login, Register, and To-Do
+---
 
 
-##Test Cases
-###Authentication
+> ## Approach
+> ```bash
+>Built REST APIs for authentication and To-Do CRUD operations
+>Used JWT for secure user authentication
+>Angular services handle backend communication
+>Modular folder structure for clean and scalable code
+>Separate components for Login, Register, and To-Do
 
-Register with valid credentials → User created
+---
 
-Login with correct credentials → Successful login
+> ## Test Cases
+>```bash
+> ### Authentication
+> Register with valid credentials → User created
+> Login with correct credentials → Successful login
+> Login with invalid credentials → Error shown
+> ### To-Do
+>Add a new task → Task appears in list
+>Edit task → Task updates correctly
+>Delete task → Task removed
+>Refresh page → Data persists from MongoDB
 
-Login with invalid credentials → Error shown
-
-###To-Do
-
-Add a new task → Task appears in list
-
-Edit task → Task updates correctly
-
-Delete task → Task removed
-
-Refresh page → Data persists from MongoDB
-
-##  VERY IMPORTANT (Exam Tip)
+---
+##  VERY IMPORTANT 
 - **Single README is correct**
 - Backend + Frontend both explained 
 - Setup steps present 
