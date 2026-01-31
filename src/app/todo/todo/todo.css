@@ -1,0 +1,164 @@
+/* General body setup */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Dark mode background */
+.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Container for the to-do list */
+.todo-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode container */
+.dark .todo-container {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+/* Heading */
+.todo-container h1 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.dark .todo-container h1 {
+  color: #f0f0f0;
+}
+
+/* Input group for adding tasks */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+}
+
+/* Add button */
+.input-group button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+  background-color: #0056b3;
+}
+
+/* Toggle dark mode button */
+.todo-container > button {
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.todo-container > button:hover {
+  background-color: #5a6268;
+}
+
+/* Each task item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s;
+}
+
+.dark .todo-item {
+  background-color: #3a3a3a;
+}
+
+/* Task text */
+.todo-item span {
+  flex: 1;
+  text-align: left;
+}
+
+/* Task buttons */
+.todo-item button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+/* Edit button */
+.todo-item button:first-of-type {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.todo-item button:first-of-type:hover {
+  background-color: #e0a800;
+}
+
+/* Delete button */
+.todo-item button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+.todo-item button:last-of-type:hover {
+  background-color: #c82333;
+}
+
+/* Edit mode input */
+.todo-item input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  margin-right: 8px;
+}
+
+.dark .todo-item input[type="text"] {
+  background-color: #555;
+  color: #fff;
+  border-color: #888;
+}

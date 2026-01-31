@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Todo {
-  _id: string;
+  _id: string;   // ✅ MongoDB id
   task: string;
 }
 
@@ -26,4 +26,9 @@ export class TodoService {
   deleteTask(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+
+  updateTask(id: string, task: string) {
+  return this.http.put<Todo>(`${this.apiUrl}/${id}`, { task });
+}
+
 }

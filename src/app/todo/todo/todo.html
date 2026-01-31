@@ -1,0 +1,39 @@
+<div [class.dark]="darkMode">
+  <div class="todo-container">
+
+    <h1>To-Do List</h1>
+
+    <div class="input-group">
+      <input
+        type="text"
+        placeholder="Enter new task"
+        [(ngModel)]="task"
+      />
+      <button (click)="addTask()">Add</button>
+    </div>
+
+    <button (click)="toggleDark()">🌙 Toggle Dark Mode</button>
+
+    <div
+      class="todo-item"
+      *ngFor="let t of taskList; trackBy: trackById"
+    >
+
+      <!-- NORMAL VIEW -->
+      <div *ngIf="editingTaskId !== t._id">
+        <span>{{ t.task }}</span>
+        <button (click)="startEdit(t)">Edit</button>
+        <button (click)="deleteTask(t._id)">Delete</button>
+      </div>
+
+      <!-- EDIT MODE -->
+      <div *ngIf="editingTaskId === t._id">
+        <input type="text" [(ngModel)]="editTask" />
+        <button (click)="updateTask()">Update</button>
+        <button (click)="cancelEdit()">Cancel</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
